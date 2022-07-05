@@ -46,3 +46,27 @@ function showCollection(collectionInput){
 // test showCollection function
 
 showCollection(collection);
+
+
+/**
+ * @param {string} artist
+ * @return array with matching results. if no results found, return an empty array
+ */
+
+
+function findByArtist(artist){
+    let artistAlbums = [];
+    for(let i=0; i<collection.length; i++){
+        console.log('in findByArtist loop');
+        if(collection[i].artist === artist){
+            console.log('match!')
+            artistAlbums.push(collection[i])
+        }
+    }
+    console.log('artist album list:', artistAlbums);
+    return artistAlbums;
+}
+
+findByArtist('Sza');
+findByArtist('Deep Sea Diver');
+findByArtist('Japanese Breakfast');
