@@ -29,3 +29,20 @@ addToCollection('Lush', 'Snail Mail', 2018);
 addToCollection('Impossible Weight', 'Deep Sea Diver', 2020);
 
 console.log(collection);
+
+
+/**
+ * @param {array} collectionInput
+ */
+
+function showCollection(collectionInput){
+    console.log(collectionInput.length)
+    for(let i=0; i<collectionInput.length; i++){
+        console.log('in for loop')
+        console.log(collectionInput[i].title, 'by', collectionInput[i].artist, ', published in', collectionInput[i].yearPublished);
+    }
+}
+
+// test showCollection function
+
+showCollection(collection);
